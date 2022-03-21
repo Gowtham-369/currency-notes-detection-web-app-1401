@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Play Audio</title>
+
+        <link rel="stylesheet" type="text/css" href="../static/index.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" src="../static/index.js"></script>
+
+    </head>
+
+    <body>
+        <p>Play below english speech file</p>
+        <audio id="audiobox-english" controls autoplay>
+            <source src="{{ url_for('static', filename='')}}{{audioFileEnglish}} " type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <p>Play below hindi speech file</p>
+        <audio id="audiobox-hindi" controls >
+            <source src="{{ url_for('static', filename='')}}{{audioFileHindi}} " type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </body>
+
+</html>

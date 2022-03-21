@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>YOLO-Currency Notes Detection</title>
+  <!-- My CSS -->
+  <link rel="stylesheet" type="text/css" href="../static/index.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+  </script>
+  <!-- My JS -->
+  <script type="text/javascript" src="../static/index.js"></script>
+</head>
+
+<body>
+  <div class="app">
+    <div class="app-header">
+      <p class="title-wrap">
+          Indian Currency Notes Detection - YOLO
+      </p>
+      <div class="pre-img">
+        <span>
+          <img id="imagebox" src="" />
+        </span>
+      </div>
+      <form>
+        <input id="imageinput" type="file" name="image" onchange="readUrl(this)">
+      </form>
+      <button name="send" id="sendbutton" onclick="changeColor()">Send</button>
+
+      <div class="loading">
+        <div class="percent">100%</div>
+        <div class="text">Completed!</div>
+        <div class="progress-bar">
+          <div class="progress">
+          </div>
+        </div>
+      </div>
+
+      <a href="/audioFile"><button id="voiceoutput" class="voiceoutputbtn">Get Speech Out</button></a>
+    </div>
+  </div>
+
+</body>
+
+</html>
