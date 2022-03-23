@@ -40,6 +40,7 @@ def mask_image():
     print("{} This is from app.py".format(text))
     if(len(text) == 0):
         text = "Reload the page and try with another better image"
+
     tts_english = gTTS(text, lang="en", tld="com")
     # ask user the lang
     # call to google Translate api to convert text in english to text in given lang
@@ -94,4 +95,10 @@ def after_request(response):
 if __name__ == '__main__':
 	# app.run(debug=True) 
     # when run using above command change localhost/5000 default port in index.js file
-    app.run(host="0.0.0.0",port=8080,debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=False)
+    #below method is for devices connected to Wifi
+    # using ifconfig/ipconfig cmd in terminal find ip
+    # app.run(debug=False, host="xxx.xxx.xxx.xxx",port=8080)
+    # change the route path in index.js with http://host_ip:port/
+
+    

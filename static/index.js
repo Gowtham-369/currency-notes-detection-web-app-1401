@@ -8,7 +8,9 @@ window.onload = () => {
 			let formData = new FormData();
 			formData.append('image' , input.files[0]);
 			$.ajax({
-				url: "http://localhost:8080/detectObject", // fix this to your liking
+				url: "http://0.0.0.0:8080/detectObject", 
+				// fix below to your liking
+				// url: "http://xxx.xxx.xxx.xxx:8080/detectObject", 
 				type:"POST",
 				data: formData,
 				cache: false,
@@ -97,11 +99,11 @@ function updateInterface(){
 	$(".loading").show();
 	progress();
 
-
+	// show voice output after 18s approx
 	setTimeout(
 		function () {
 			showTarget();
-		}, 15000
+		}, 18000
 	);
 
 	function showTarget() {

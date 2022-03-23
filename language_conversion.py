@@ -23,8 +23,8 @@ convert_word_to_hindi = {
 
 def convert_lang(text):
     res = ""
-    if(text == "Try with another better image"):
-        res = "ek aur behatar chhavi ke saath prayaas karen"
+    if(text == "Reload the page and try with another better image"):
+        res = "Reload karne ke bad ek aur behatar chhavi ke saath prayaas karen"
     else:
         wordArr = list(text.split(' '))
         res = "is chhavi mein "
